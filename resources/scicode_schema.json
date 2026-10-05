@@ -1,0 +1,269 @@
+[
+  {
+    "name": "prompt",
+    "nullable": true,
+    "type": "list",
+    "element": {
+      "name": "element",
+      "nullable": true,
+      "type": "struct",
+      "children": [
+        {
+          "name": "role",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "content",
+          "nullable": true,
+          "type": "string"
+        }
+      ]
+    }
+  },
+  {
+    "name": "label",
+    "nullable": true,
+    "type": "string"
+  },
+  {
+    "name": "data_source",
+    "nullable": true,
+    "type": "string"
+  },
+  {
+    "name": "reward_model",
+    "nullable": true,
+    "type": "struct",
+    "children": [
+      {
+        "name": "style",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "name": "ground_truth",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "extra_info",
+    "nullable": true,
+    "type": "struct",
+    "children": [
+      {
+        "name": "problem_id",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "name": "problem_data",
+        "nullable": true,
+        "type": "struct",
+        "children": [
+          {
+            "name": "problem_id",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "problem_name",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "problem_title",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "required_dependencies",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "sub_steps",
+            "nullable": true,
+            "type": "list",
+            "element": {
+              "name": "element",
+              "nullable": true,
+              "type": "struct",
+              "children": [
+                {
+                  "name": "step_number",
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "name": "step_description_prompt",
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "name": "step_background",
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "name": "function_header",
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "name": "return_line",
+                  "nullable": true,
+                  "type": "string"
+                },
+                {
+                  "name": "test_cases",
+                  "nullable": true,
+                  "type": "list",
+                  "element": {
+                    "name": "element",
+                    "nullable": true,
+                    "type": "string"
+                  }
+                },
+                {
+                  "name": "ground_truth_code",
+                  "nullable": true,
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "h5py_file",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "scicode_repo",
+            "nullable": true,
+            "type": "string"
+          },
+          {
+            "name": "dense_reward",
+            "nullable": true,
+            "type": "bool"
+          },
+          {
+            "name": "with_background",
+            "nullable": true,
+            "type": "bool"
+          }
+        ]
+      },
+      {
+        "name": "sub_steps",
+        "nullable": true,
+        "type": "list",
+        "element": {
+          "name": "element",
+          "nullable": true,
+          "type": "struct",
+          "children": [
+            {
+              "name": "step_number",
+              "nullable": true,
+              "type": "string"
+            },
+            {
+              "name": "step_description_prompt",
+              "nullable": true,
+              "type": "string"
+            },
+            {
+              "name": "step_background",
+              "nullable": true,
+              "type": "string"
+            },
+            {
+              "name": "function_header",
+              "nullable": true,
+              "type": "string"
+            },
+            {
+              "name": "return_line",
+              "nullable": true,
+              "type": "string"
+            },
+            {
+              "name": "test_cases",
+              "nullable": true,
+              "type": "list",
+              "element": {
+                "name": "element",
+                "nullable": true,
+                "type": "string"
+              }
+            },
+            {
+              "name": "ground_truth_code",
+              "nullable": true,
+              "type": "string"
+            }
+          ]
+        }
+      },
+      {
+        "name": "required_dependencies",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "name": "h5py_file",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "name": "scicode_repo",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "name": "dense_reward",
+        "nullable": true,
+        "type": "bool"
+      },
+      {
+        "name": "with_background",
+        "nullable": true,
+        "type": "bool"
+      },
+      {
+        "name": "evaluation_mode",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "name": "source_file",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "name": "source_line",
+        "nullable": true,
+        "type": "int64"
+      },
+      {
+        "name": "source_tag",
+        "nullable": true,
+        "type": "string"
+      },
+      {
+        "name": "original_data_source",
+        "nullable": true,
+        "type": "string"
+      }
+    ]
+  },
+  {
+    "name": "agent_name",
+    "nullable": true,
+    "type": "string"
+  }
+]

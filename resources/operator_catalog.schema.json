@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "operator catalog record",
+  "type": "object",
+  "required": [
+    "id",
+    "domain",
+    "subdomain",
+    "library",
+    "operator",
+    "operator_kind",
+    "related_apis",
+    "inputs",
+    "outputs",
+    "meaning",
+    "scicode_use",
+    "test_oracles",
+    "scope"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable kebab-case identifier.",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subdomain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "library": {
+      "type": "string",
+      "description": "Library name or slash-separated library group.",
+      "minLength": 1
+    },
+    "operator": {
+      "type": "string",
+      "description": "Semantic operator or operator family.",
+      "minLength": 1
+    },
+    "operator_kind": {
+      "type": "string",
+      "description": "High-level kind such as solver, transform, simulator, estimator, descriptor, parser, model, or diagnostic.",
+      "minLength": 1
+    },
+    "related_apis": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Input descriptors in the form name: type - meaning and important constraints.",
+      "minItems": 1
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Output descriptors in the form name: type - meaning and important constraints.",
+      "minItems": 1
+    },
+    "meaning": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scicode_use": {
+      "type": "string",
+      "minLength": 1
+    },
+    "test_oracles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "semantic_operator_family",
+        "representative_api",
+        "exact_api"
+      ],
+      "minLength": 1
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "input_catalog": "../resources/relativity_gravitation.jsonl",
+  "work_dir": "../outputs/example",
+  "environment": {
+    "mode": "current",
+    "python": null,
+    "config": "environments.json",
+    "venv_root": "../venvs"
+  },
+  "sampling": {
+    "subdomains": [
+      "relativity_gravitation"
+    ],
+    "chain_lengths": [
+      3
+    ],
+    "chains_per_subdomain_length": 2,
+    "seed": 42,
+    "subdomain_weights": null,
+    "limit": 2
+  },
+  "generation": {
+    "workflow_workers": 1,
+    "validation_timeout": 45,
+    "max_repair_rounds": 8,
+    "quality_repair_rounds": 1,
+    "quality_min_grade": "A",
+    "temperature": 0.4
+  },
+  "source_tag": "scidata_example"
+}

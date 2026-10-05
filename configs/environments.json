@@ -1,0 +1,9 @@
+{
+  "environments": {
+    "scicode_astro_hep": {
+      "description": "Relativity / Gravitation example",
+      "subdomains": ["Physics::Relativity / Gravitation"],
+      "requirements": "requirements/example-py310.lock.txt"
+    }
+  }
+}

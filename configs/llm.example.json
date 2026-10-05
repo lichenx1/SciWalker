@@ -1,0 +1,12 @@
+{
+  "base_url": "http://127.0.0.1:8000/v1",
+  "model": "YOUR_MODEL_ID",
+  "backend": "chat_completions",
+  "api_key": "YOUR_API_KEY",
+  "timeout_sec": 1800,
+  "max_tokens": 32768,
+  "parallelism": 4,
+  "retries": 2,
+  "json_response_format": true,
+  "extra_body": {}
+}
